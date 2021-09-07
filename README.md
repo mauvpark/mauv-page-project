@@ -8,3 +8,5 @@
 ## B. Plan
 1. Scrollable per page
 2. Navigation to explore project
+3. Dark mode
+4. Art combination? Glassmorphism? Lottie?
