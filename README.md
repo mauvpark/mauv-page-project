@@ -10,3 +10,7 @@
 2. Navigation to explore project
 3. Dark mode
 4. Art combination? Glassmorphism? Lottie?
+
+## C. To do
+1. Material UI, component position adjustment.
+2. Chrome scroll issue.
