@@ -1,0 +1,51 @@
+.PRInnerContainer {
+	padding: 2rem 1rem;
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	height: 85%;
+
+	border-radius: 2rem;
+
+	@media screen and (max-width: 900px) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.imageSection {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.PRLottie {
+			max-width: 300px;
+			max-height: 300px;
+		}
+	}
+
+	.textSection {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+
+		h1 {
+			padding-left: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			margin-top: 1rem;
+		}
+
+		.techStack {
+			display: flex;
+			flex-wrap: wrap;
+			line-height: 3;
+			margin-top: 1rem;
+
+			.chip {
+				margin-top: 5px;
+			}
+		}
+	}
+}

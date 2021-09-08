@@ -1,9 +1,26 @@
+@import url(https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap);
+
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #fff;
+  transition: all 0.5s ease;
+  scroll-snap-type: y mandatory;
+}
+
+body.dark {
+  background: black;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+body.dark .PRInnerContainer {
+  background: black;
+  border-color: #fff;
+  border-width: 2px;
+  border-style: solid;
+  color: #fff;
 }
 
 a {
@@ -11,6 +28,19 @@ a {
   text-decoration: none;
 }
 
+.container {
+  height: 100vh;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+  scroll-behavior: smooth;
+	scroll-snap-align: center;
+  overflow-y: scroll;
+}
+
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
 }
