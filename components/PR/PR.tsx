@@ -1,13 +1,15 @@
 import React from "react";
-import { Container, Paper, Chip, Stack } from "@mui/material";
+import { Container, Paper, Chip, Stack, Typography, Link } from "@mui/material";
 import { Player } from "@lottiefiles/react-lottie-player";
 import classNames from "classnames";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 
 import styles from "./PR.module.scss";
 
 const PR = (): React.ReactElement => {
 	return (
-		<Container className="container" maxWidth="xl">
+		<Container className="section" maxWidth="xl">
 			<Paper
 				className={classNames(
 					styles.PRInnerContainer,
@@ -24,10 +26,54 @@ const PR = (): React.ReactElement => {
 					/>
 				</section>
 				<section className={styles.textSection}>
-					<h1>HYEONMIN PARK</h1>
-					<p>📌 모르는 건 될 때까지 파는 성격의 소유자</p>
-					<p>📌 새로운 기술을 끊임없이 탐욕하는 자</p>
-					<p>📌 성장 욕구가 투철한 자</p>
+					<a
+						href="https://github.com/Mauv-hub"
+						target="_blank"
+						rel="noreferrer"
+					>
+						HYEONMIN PARK
+					</a>
+					<Typography>
+						🐖 2020년 Java 책 두 권과 함께 개발 공부 시작
+					</Typography>
+					<Typography>
+						📌 모르는 건 될 때까지 파는 성격의 소유자
+					</Typography>
+					<Typography>
+						📌 새로운 기술을 끊임없이 탐욕하는 자
+					</Typography>
+					<Typography>📌 성장 욕구가 투철한 자</Typography>
+					<Typography>🌐 존경하는 스승님: Stackoverflow</Typography>
+					<Typography
+						style={{
+							display: "flex",
+							alignItems: "center",
+						}}
+					>
+						<GitHubIcon color="primary" fontSize="small" />
+						&nbsp;
+						<Link
+							href="https://github.com/Mauv-hub"
+							target="_blank"
+							style={{
+								margin: 0,
+								padding: 0,
+								fontSize: "1rem",
+							}}
+							underline="hover"
+						>
+							Welcome to Mauv-hub!
+						</Link>
+					</Typography>
+					<Typography
+						style={{
+							display: "flex",
+							alignItems: "center",
+						}}
+					>
+						<AlternateEmailIcon color="primary" fontSize="small" />
+						&nbsp;mauvpark@gmail.com
+					</Typography>
 					<Stack
 						className={styles.techStack}
 						direction="row"

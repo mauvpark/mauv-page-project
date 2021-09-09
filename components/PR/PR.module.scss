@@ -1,9 +1,11 @@
 .PRInnerContainer {
 	padding: 2rem 1rem;
 	display: flex;
+	justify-content: space-evenly;
 	flex-direction: row;
 	width: 80%;
 	height: 85%;
+	min-height: 750px;
 
 	border-radius: 2rem;
 
@@ -28,7 +30,8 @@
 		justify-content: center;
 		flex-direction: column;
 
-		h1 {
+		a {
+			font-size: 2rem;
 			padding-left: 1rem;
 			margin-bottom: 1rem;
 		}

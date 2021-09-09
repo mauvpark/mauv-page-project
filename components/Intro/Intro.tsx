@@ -7,7 +7,7 @@ import styles from "./Intro.module.scss";
 
 const Intro = (): React.ReactElement => {
 	return (
-		<Container className={classNames("container", "intro")} maxWidth="xl">
+		<Container className="section" maxWidth="xl">
 			<Player
 				className={styles.lottieCodeMan}
 				autoplay

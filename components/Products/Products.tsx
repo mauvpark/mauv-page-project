@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { Container, Box, Typography, Tabs, Tab } from "@mui/material";
+import { Container, Box, Typography, Tabs, Tab, Paper } from "@mui/material";
 
 import styles from "./Products.module.scss";
 import Bus from "./Bus/Bus";
+import Plaiing from "./Plaiing/Plaiing";
+import Circler from "./Circler/Circler";
 
 interface TabPanelProps {
 	children?: React.ReactNode;
@@ -10,20 +12,28 @@ interface TabPanelProps {
 	value: number;
 }
 
+// ! hidden은 겹쳐진 컴포넌트가 존재할 경우, css를 망가뜨림. 그러므로 display "none"을 사용해야 함.
+
 function TabPanel(props: TabPanelProps) {
 	const { children, value, index, ...other } = props;
 
 	return (
 		<div
+			className={styles.tabPanel}
+			style={value !== index ? { display: "none" } : {}}
 			role="tabpanel"
-			hidden={value !== index}
 			id={`vertical-tabpanel-${index}`}
 			aria-labelledby={`vertical-tab-${index}`}
 			{...other}
 		>
 			{value === index && (
-				<Box sx={{ p: 3 }}>
-					<Typography>{children}</Typography>
+				<Box
+					sx={{
+						width: "100%",
+						height: "100%",
+					}}
+				>
+					{children}
 				</Box>
 			)}
 		</div>
@@ -45,25 +55,38 @@ const Products = (): React.ReactElement => {
 	};
 
 	return (
-		<Container className="container" maxWidth="xl">
+		<Container className="section" maxWidth="xl">
+			<Typography className={styles.topic} variant="h5">
+				PRODUCTS
+			</Typography>
 			<Box
+				className="productsContainer"
 				sx={{
-					flexGrow: 1,
 					bgcolor: "background.paper",
 					display: "flex",
 					alignItems: "center",
-					height: "100%",
+					justifyContent: "space-between",
+					width: "100%",
+					height: "85%",
+					borderRadius: "2rem",
+					boxShadow: 3,
 				}}
 			>
 				<Tabs
+					className="tabs"
 					orientation="vertical"
 					variant="scrollable"
 					value={value}
 					onChange={handleChange}
 					aria-label="Vertical tabs example"
-					sx={{ borderRight: 1, borderColor: "divider" }}
+					textColor="inherit"
+					sx={{
+						borderRight: 1,
+						borderColor: "divider",
+						width: "10rem",
+					}}
 				>
-					<Tab label="전주 버스 알리미" {...a11yProps(0)} />
+					<Tab label="버스 알리미" {...a11yProps(0)} />
 					<Tab label="PLAIING" {...a11yProps(1)} />
 					<Tab label="CIRCLER" {...a11yProps(2)} />
 				</Tabs>
@@ -71,10 +94,10 @@ const Products = (): React.ReactElement => {
 					<Bus />
 				</TabPanel>
 				<TabPanel value={value} index={1}>
-					Item Two
+					<Plaiing />
 				</TabPanel>
 				<TabPanel value={value} index={2}>
-					Item Three
+					<Circler />
 				</TabPanel>
 			</Box>
 		</Container>
