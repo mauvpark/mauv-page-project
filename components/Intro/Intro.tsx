@@ -6,7 +6,17 @@ import styles from "./Intro.module.scss";
 
 const Intro = (): React.ReactElement => {
 	return (
-		<Container className="section" maxWidth="xl">
+		<Container
+			sx={{
+				position: "relative",
+				height: "100%",
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				scrollSnapAlign: "center",
+			}}
+			maxWidth="xl"
+		>
 			<Player
 				className={styles.lottieCodeMan}
 				autoplay

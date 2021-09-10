@@ -54,7 +54,17 @@ const Projects = (): React.ReactElement => {
 	};
 
 	return (
-		<Container className="section" maxWidth="xl">
+		<Container
+			sx={{
+				position: "relative",
+				height: "100%",
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				scrollSnapAlign: "center",
+			}}
+			maxWidth="xl"
+		>
 			<Typography className={styles.topic} variant="h5">
 				PROJECTS
 			</Typography>

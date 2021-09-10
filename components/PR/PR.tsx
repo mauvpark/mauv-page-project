@@ -9,7 +9,17 @@ import styles from "./PR.module.scss";
 
 const PR = (): React.ReactElement => {
 	return (
-		<Container className="section" maxWidth="xl">
+		<Container
+			sx={{
+				position: "relative",
+				height: "100%",
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				scrollSnapAlign: "center",
+			}}
+			maxWidth="xl"
+		>
 			<Paper
 				className={classNames(
 					styles.PRInnerContainer,
