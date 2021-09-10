@@ -1,5 +1,4 @@
 import React from "react";
-import classNames from "classnames";
 import { Container } from "@mui/material";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 

@@ -11,9 +11,9 @@ import {
 import Iframe from "react-iframe";
 
 import { theme } from "../../../styles/theme";
-import styles from "./Circler.module.scss";
+import styles from "./SocketIoChatApp.module.scss";
 
-const Circler = (): React.ReactElement => {
+const SocketIoChatApp = () => {
 	const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
 	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -28,7 +28,7 @@ const Circler = (): React.ReactElement => {
 	const id = open ? "simple-popover" : undefined;
 
 	return (
-		<div className={styles.circlerContainer}>
+		<div className={styles.sicaContainer}>
 			<Box
 				sx={{
 					width: "100%",
@@ -40,7 +40,7 @@ const Circler = (): React.ReactElement => {
 				}}
 			>
 				<Button
-					sx={{ width: "100%" }}
+					sx={{ width: "80%" }}
 					aria-describedby={id}
 					onClick={handleClick}
 				>
@@ -67,33 +67,33 @@ const Circler = (): React.ReactElement => {
 								fontWeight: "bold",
 							}}
 						>
-							PLAIING 계정과 연동 되는 포스팅 중점의 소셜
-							어플리케이션
+							Socket IO를 이용한 간단한 채팅 어플리케이션
 						</Typography>
 						<Typography gutterBottom>
 							<Link
-								href="https://circler.vercel.app/"
+								href="https://mauv-socket-io-app.netlify.app/"
 								target="_blank"
 								underline="hover"
 							>
-								CIRCLER 링크
+								APP 링크
+							</Link>{" "}
+							&nbsp;{" "}
+							<Link
+								href="https://github.com/Mauv-hub/socket-io-chat-app"
+								target="_blank"
+								underline="hover"
+							>
+								소스 코드
 							</Link>
 						</Typography>
+						<Typography gutterBottom>🌟 사용방법</Typography>
 						<Typography gutterBottom>
-							- 2021년 개발 및 출시
+							&nbsp;&nbsp;🤹🏻 테스트를 원하시는 분은 APP 링크를
+							눌러 두 개의 창에 같은 Room을 적어 주세요.
 						</Typography>
 						<Typography gutterBottom>
-							- 웹 포스팅 기능 알고리즘 구현.
-						</Typography>
-						<Typography gutterBottom>
-							- Tiptap을 이용한 Rich text editor 구현
-						</Typography>
-						<Typography gutterBottom>
-							- React bootstrap library를 기반으로 mobile에서도
-							최적화 된 웹앱 개발 경험 축적
-						</Typography>
-						<Typography gutterBottom>
-							- Next JS를 통한 SSR 경험
+							&nbsp;&nbsp;🤹🏻‍♀️ 혹은 친구와 방 번호를 공유해
+							테스트해보세요.
 						</Typography>
 						<Stack
 							className={styles.techStack}
@@ -107,7 +107,7 @@ const Circler = (): React.ReactElement => {
 							/>
 							<Chip
 								className={styles.chip}
-								label="Next js"
+								label="Socket IO"
 								color="primary"
 								sx={{
 									bgcolor: "text.primary",
@@ -115,7 +115,7 @@ const Circler = (): React.ReactElement => {
 							/>
 							<Chip
 								className={styles.chip}
-								label="Firebase"
+								label="Heroku"
 								color="primary"
 								sx={{
 									bgcolor: "secondary.main",
@@ -123,18 +123,10 @@ const Circler = (): React.ReactElement => {
 							/>
 							<Chip
 								className={styles.chip}
-								label="TypeScript"
+								label="Netlify"
 								color="primary"
 								sx={{
 									bgcolor: "info.main",
-								}}
-							/>
-							<Chip
-								className={styles.chip}
-								label="MobX"
-								color="primary"
-								sx={{
-									bgcolor: theme.palette.secondary.light,
 								}}
 							/>
 						</Stack>
@@ -143,7 +135,7 @@ const Circler = (): React.ReactElement => {
 				<Iframe
 					className={styles.iframe}
 					height="90%"
-					url="https://circler.vercel.app/"
+					url="https://mauv-socket-io-app.netlify.app/"
 					id="myId"
 					position="relative"
 				/>
@@ -152,4 +144,4 @@ const Circler = (): React.ReactElement => {
 	);
 };
 
-export default Circler;
+export default SocketIoChatApp;

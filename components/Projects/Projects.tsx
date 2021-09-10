@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Container, Box, Typography, Tabs, Tab } from "@mui/material";
 
-import styles from "./Products.module.scss";
-import Bus from "./Bus/Bus";
-import Plaiing from "./Plaiing/Plaiing";
-import Circler from "./Circler/Circler";
+import styles from "./Projects.module.scss";
+import SocketIoChatApp from "./Socket-io-chat-app/SocketIoChatApp";
+import MernApp from "./Mern-app/MernApp";
 
 interface TabPanelProps {
 	children?: React.ReactNode;
@@ -47,7 +46,7 @@ function a11yProps(index: number) {
 	};
 }
 
-const Products = (): React.ReactElement => {
+const Projects = (): React.ReactElement => {
 	const [value, setValue] = useState(0);
 
 	const handleChange = (event: any, newValue: number) => {
@@ -57,7 +56,7 @@ const Products = (): React.ReactElement => {
 	return (
 		<Container className="section" maxWidth="xl">
 			<Typography className={styles.topic} variant="h5">
-				PRODUCTS
+				PROJECTS
 			</Typography>
 			<Box
 				className="productsContainer"
@@ -86,22 +85,18 @@ const Products = (): React.ReactElement => {
 						width: "10rem",
 					}}
 				>
-					<Tab label="버스 알리미" {...a11yProps(0)} />
-					<Tab label="PLAIING" {...a11yProps(1)} />
-					<Tab label="CIRCLER" {...a11yProps(2)} />
+					<Tab label="Socket IO chat app" {...a11yProps(0)} />
+					<Tab label="MERN post app" {...a11yProps(1)} />
 				</Tabs>
 				<TabPanel value={value} index={0}>
-					<Bus />
+					<SocketIoChatApp />
 				</TabPanel>
 				<TabPanel value={value} index={1}>
-					<Plaiing />
-				</TabPanel>
-				<TabPanel value={value} index={2}>
-					<Circler />
+					<MernApp />
 				</TabPanel>
 			</Box>
 		</Container>
 	);
 };
 
-export default Products;
+export default Projects;
