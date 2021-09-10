@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 	return (
 		<div>
 			<Head>
-				<title>Welcome!</title>
+				<title>Welcome to Mauv !</title>
 				<meta name="description" content="Welcome to Mauv site!" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>

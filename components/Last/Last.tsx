@@ -1,4 +1,4 @@
-import { Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import React, { ReactElement } from "react";
 
 import styles from "./Last.module.scss";
@@ -8,12 +8,12 @@ const Last = (): ReactElement => {
 		<Container
 			className={styles.lastContainer}
 			sx={{
-				width: "100%",
+				position: "relative",
 				height: "100%",
-				scrollSnapAlign: "center",
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "center",
+				scrollSnapAlign: "center",
 			}}
 			maxWidth="xl"
 		>
