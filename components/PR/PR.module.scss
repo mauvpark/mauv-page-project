@@ -1,13 +1,4 @@
 .PRInnerContainer {
-	padding: 2rem 1rem;
-	display: flex;
-	justify-content: space-evenly;
-	flex-direction: row;
-	width: 80%;
-	height: 85%;
-	min-height: 750px;
-
-	border-radius: 2rem;
 
 	@media screen and (max-width: 900px) {
 		display: flex;

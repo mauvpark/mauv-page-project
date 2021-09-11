@@ -21,6 +21,9 @@ const Home: NextPage = () => {
 
 			<main className="container">
 				<Player
+					rendererSettings={{
+						preserveAspectRatio: "none",
+					}}
 					style={{
 						top: 0,
 						left: 0,

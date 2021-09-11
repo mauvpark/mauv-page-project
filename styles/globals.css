@@ -36,15 +36,6 @@ a {
   scroll-snap-type: y mandatory;
 }
 
-.section {
-  position: relative;
-  height: 100%;
-  display: flex;
-	justify-content: center;
-	align-items: center;
-	scroll-snap-align: center;
-}
-
 * {
   padding: 0;
   margin: 0;

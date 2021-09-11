@@ -25,6 +25,16 @@ const PR = (): React.ReactElement => {
 					styles.PRInnerContainer,
 					"PRInnerContainer"
 				)}
+				sx={{
+					padding: "2rem 1rem",
+					display: "flex",
+					justifyContent: "space-evenly",
+					flexDirection: "row",
+					width: "80%",
+					height: "85%",
+
+					borderRadius: "2rem",
+				}}
 				elevation={3}
 			>
 				<section className={styles.imageSection}>
