@@ -50,19 +50,26 @@ https://mauv-page.vercel.app/
 > <br />
 > **참고** [products](https://github.com/Mauv-hub/mauv-page-project/blob/main/components/Products/Products.tsx) `components/Products/Products`
 
-## C. Debug To Do
-1. Material UI, component position adjustment. (Solved!)
-2. Chrome scroll issue. (Solved!)
+## C. Debug
+### *겹쳐진 Components의 css 붕괴 현상* 
+> `style hidden`은 css를 전부 망가뜨린다. 따라서 `display: none`을 사용해야 css가 붕괴되지 않는다.`Products/TabPanel`
 
-## D. Debug
-1. 겹쳐진 Component의 `style hidden`은 css를 전부 망가뜨린다. 따라서 `display: none`을 사용해야 css가 붕괴되지 않는다.`Products/TabPanel`
-2. Material UI의 `Container`는 양 옆의 margin을 남겨 예상한 css를 표현하지 않을 때가 있다. 최상위 container를 설정할 때의 `Container` Component는 유용하나 child 단위로 내려갈수록 지양하는 게 좋다.
-3. Material UI의 styling은 정해진 양식에 따라야 하는 경우가 많고, components는 무조건 `sx prop`으로 넘겨야 한다. 그렇지 않으면 제한된 css를 구현하게 되고 제대로 작동하지 않는 경우가 많다. 꼭 필요한 경우를 제외하고는 `className`을 사용하는 것은 지양한다.(global 단위의 css 선언 등.)
-4. 상위 parent component에서 `%`의 `width height`을 가져오는 경우, 중간에 끼어 있는 컴포넌트에서 `width height`을 잘 전달받고 있는지 확인해야 한다.`Products/TabPanel` => `children component`
-5. *Lottie*의 Responsive 환경에서 top, bottom이 채워지지 않는 현상 발생, preserveAspectRatio로 조정하여 해결. [링크](https://github.com/airbnb/lottie-web/wiki/Renderer-Settings#preserveaspectratio)
-6. 페이지 컴포넌트에서 scroll이 작동하지 않는 issue 발생: css의 `position`이 제대로 할당되지 않아 발생한 것을 알게 돼 `position` 할당 후 해결
+### *Material UI `Container`의 제한된 maxWidth* 
+> Material UI의 `Container`는 양 옆의 margin을 남겨 예상한 css를 표현하지 않을 때가 있다. 최상위 container를 설정할 때의 `Container` Component는 유용하나 child 단위로 내려갈수록 지양하는 게 좋다.
 
-## F. Report
+### *Material UI의 Styling* 
+> Material UI의 styling은 정해진 양식에 따라야 하는 경우가 많고, components는 무조건 `sx prop`으로 넘겨야 한다. 그렇지 않으면 제한된 css를 구현하게 되고 제대로 작동하지 않는 경우가 많다. 꼭 필요한 경우를 제외하고는 `className`을 사용하는 것은 지양한다.(global 단위의 css 선언 등.)
+
+### *parent's width, height inheritance issue* 
+> 상위 parent component에서 `%`의 `width height`을 가져오는 경우, 중간에 끼어 있는 컴포넌트에서 `width height`을 잘 전달받고 있는지 확인해야 한다.`Products/TabPanel` => `children component`
+
+### *Lottie Responsive environment top, botom blank issue* 
+> *Lottie*의 Responsive 환경에서 top, bottom이 채워지지 않는 현상 발생, preserveAspectRatio로 조정하여 해결. [링크](https://github.com/airbnb/lottie-web/wiki/Renderer-Settings#preserveaspectratio)
+
+### *Position과 scroll간의 관계성 issue* 
+> 페이지 컴포넌트에서 scroll이 작동하지 않는 issue 발생: css의 `position`이 제대로 할당되지 않아 발생한 것을 알게 돼 `position` 할당 후 해결
+
+## D. Report
 1. Day 1
 - Project 환경 설정
 - Intro 완성
