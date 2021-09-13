@@ -4,6 +4,7 @@ import { Container, Box, Typography, Tabs, Tab } from "@mui/material";
 import styles from "./Projects.module.scss";
 import SocketIoChatApp from "./Socket-io-chat-app/SocketIoChatApp";
 import MernApp from "./Mern-app/MernApp";
+import TicTacToe from "./Tic-Tac-Toe/TicTacToe";
 
 interface TabPanelProps {
 	children?: React.ReactNode;
@@ -95,13 +96,17 @@ const Projects = (): React.ReactElement => {
 						width: "10rem",
 					}}
 				>
-					<Tab label="Socket IO chat app" {...a11yProps(0)} />
-					<Tab label="MERN post app" {...a11yProps(1)} />
+					<Tab label="Tic-Tac-Toe" {...a11yProps(0)} />
+					<Tab label="Socket IO chat app" {...a11yProps(1)} />
+					<Tab label="MERN post app" {...a11yProps(2)} />
 				</Tabs>
 				<TabPanel value={value} index={0}>
-					<SocketIoChatApp />
+					<TicTacToe />
 				</TabPanel>
 				<TabPanel value={value} index={1}>
+					<SocketIoChatApp />
+				</TabPanel>
+				<TabPanel value={value} index={2}>
 					<MernApp />
 				</TabPanel>
 			</Box>

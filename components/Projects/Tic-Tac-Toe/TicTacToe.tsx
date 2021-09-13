@@ -10,9 +10,10 @@ import {
 } from "@mui/material";
 import Iframe from "react-iframe";
 
-import styles from "./SocketIoChatApp.module.scss";
+import { theme } from "../../../styles/theme";
+import styles from "./TicTacToe.module.scss";
 
-const SocketIoChatApp = (): React.ReactElement => {
+const TicTacToe = (): React.ReactElement => {
 	const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
 	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -27,7 +28,7 @@ const SocketIoChatApp = (): React.ReactElement => {
 	const id = open ? "simple-popover" : undefined;
 
 	return (
-		<div className={styles.sicaContainer}>
+		<div className={styles.tictactoeContainer}>
 			<Box
 				sx={{
 					width: "100%",
@@ -66,11 +67,11 @@ const SocketIoChatApp = (): React.ReactElement => {
 								fontWeight: "bold",
 							}}
 						>
-							Socket IO를 이용한 간단한 채팅 어플리케이션
+							Tic-Tac-Toe
 						</Typography>
 						<Typography gutterBottom>
 							<Link
-								href="https://mauv-socket-io-app.netlify.app/"
+								href="https://mauv-hub.github.io/tic-tac-toe/"
 								target="_blank"
 								underline="hover"
 							>
@@ -78,7 +79,7 @@ const SocketIoChatApp = (): React.ReactElement => {
 							</Link>{" "}
 							&nbsp;{" "}
 							<Link
-								href="https://github.com/Mauv-hub/socket-io-chat-app"
+								href="https://github.com/Mauv-hub/tic-tac-toe"
 								target="_blank"
 								underline="hover"
 							>
@@ -87,12 +88,7 @@ const SocketIoChatApp = (): React.ReactElement => {
 						</Typography>
 						<Typography gutterBottom>🌟 사용방법</Typography>
 						<Typography gutterBottom>
-							&nbsp;&nbsp;🤹🏻 테스트를 원하시는 분은 APP 링크를
-							눌러 두 개의 창에 같은 Room을 적어 주세요.
-						</Typography>
-						<Typography gutterBottom>
-							&nbsp;&nbsp;🤹🏻‍♀️ 혹은 친구와 방 번호를 공유해
-							테스트해보세요.
+							&nbsp;&nbsp;🤹🏻‍♀️ Minimax가 적용된 AI와 겨루어 보세요 !
 						</Typography>
 						<Stack
 							className={styles.techStack}
@@ -101,32 +97,24 @@ const SocketIoChatApp = (): React.ReactElement => {
 						>
 							<Chip
 								className={styles.chip}
-								label="React js"
-								color="primary"
-							/>
-							<Chip
-								className={styles.chip}
-								label="Socket IO"
+								label="HTML"
 								color="primary"
 								sx={{
-									bgcolor: "text.primary",
+									bgcolor: theme.palette.secondary.main,
 								}}
 							/>
 							<Chip
 								className={styles.chip}
-								label="Heroku"
+								label="Vanilla JS"
 								color="primary"
 								sx={{
-									bgcolor: "secondary.main",
+									bgcolor: "warning.main",
 								}}
 							/>
 							<Chip
 								className={styles.chip}
-								label="Netlify"
+								label="Webpack"
 								color="primary"
-								sx={{
-									bgcolor: "info.main",
-								}}
 							/>
 						</Stack>
 					</Box>
@@ -134,7 +122,7 @@ const SocketIoChatApp = (): React.ReactElement => {
 				<Iframe
 					className={styles.iframe}
 					height="90%"
-					url="https://mauv-socket-io-app.netlify.app/"
+					url="https://mauv-hub.github.io/tic-tac-toe/"
 					id="myId"
 					position="relative"
 				/>
@@ -143,4 +131,4 @@ const SocketIoChatApp = (): React.ReactElement => {
 	);
 };
 
-export default SocketIoChatApp;
+export default TicTacToe;
