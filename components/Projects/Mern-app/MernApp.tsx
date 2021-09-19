@@ -80,7 +80,7 @@ const MernApp = () => {
 							</Link>{" "}
 							&nbsp;{" "}
 							<Link
-								href="https://github.com/Mauv-hub/JsMastery-MERN-project"
+								href="https://github.com/mauvpark/JsMastery-MERN-project"
 								target="_blank"
 								underline="hover"
 							>

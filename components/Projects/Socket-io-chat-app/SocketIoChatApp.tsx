@@ -78,7 +78,7 @@ const SocketIoChatApp = (): React.ReactElement => {
 							</Link>{" "}
 							&nbsp;{" "}
 							<Link
-								href="https://github.com/Mauv-hub/socket-io-chat-app"
+								href="https://github.com/mauvpark/socket-io-chat-app"
 								target="_blank"
 								underline="hover"
 							>

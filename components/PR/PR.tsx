@@ -47,7 +47,7 @@ const PR = (): React.ReactElement => {
 				</section>
 				<section className={styles.textSection}>
 					<a
-						href="https://github.com/Mauv-hub"
+						href="https://github.com/mauvpark"
 						target="_blank"
 						rel="noreferrer"
 					>
@@ -73,7 +73,7 @@ const PR = (): React.ReactElement => {
 						<GitHubIcon color="primary" fontSize="small" />
 						&nbsp;
 						<Link
-							href="https://github.com/Mauv-hub"
+							href="https://github.com/mauvpark"
 							target="_blank"
 							style={{
 								margin: 0,
