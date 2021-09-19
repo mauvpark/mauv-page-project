@@ -71,7 +71,7 @@ const TicTacToe = (): React.ReactElement => {
 						</Typography>
 						<Typography gutterBottom>
 							<Link
-								href="https://mauv-hub.github.io/tic-tac-toe/"
+								href="https://mauvpark.github.io/tic-tac-toe/"
 								target="_blank"
 								underline="hover"
 							>
@@ -79,7 +79,7 @@ const TicTacToe = (): React.ReactElement => {
 							</Link>{" "}
 							&nbsp;{" "}
 							<Link
-								href="https://github.com/Mauv-hub/tic-tac-toe"
+								href="https://github.com/mauvpark/tic-tac-toe"
 								target="_blank"
 								underline="hover"
 							>
@@ -122,7 +122,7 @@ const TicTacToe = (): React.ReactElement => {
 				<Iframe
 					className={styles.iframe}
 					height="90%"
-					url="https://mauv-hub.github.io/tic-tac-toe/"
+					url="https://mauvpark.github.io/tic-tac-toe/"
 					id="myId"
 					position="relative"
 				/>

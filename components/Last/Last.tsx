@@ -19,7 +19,7 @@ const Last = (): ReactElement => {
 		>
 			<h1
 				data-text="NOW ON SALE MAUV !"
-				onClick={() => window.open("https://github.com/Mauv-hub")}
+				onClick={() => window.open("https://github.com/mauvpark")}
 			>
 				NOW ON SALE MAUV !
 			</h1>
