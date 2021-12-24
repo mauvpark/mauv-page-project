@@ -16,9 +16,69 @@ import { theme } from "../../../styles/theme";
 import styles from "./Plaiing.module.scss";
 import { images } from "./Images";
 
+function UnMemoizedText() {
+	return (
+		<Box>
+			<Typography
+				gutterBottom
+				sx={{
+					fontWeight: "bold",
+				}}
+			>
+				1:1 채팅, 친구관리, 단체채팅을 지원하는 익명 채팅 어플리케이션.
+			</Typography>
+			<Typography gutterBottom>- 2020년 개발, 2021년 출시</Typography>
+			<Typography gutterBottom>
+				- Gifted Chat library와 Firebase를 이용한 개인 및 단체 채팅
+				알고리즘 개발
+			</Typography>
+			<Typography gutterBottom>
+				- Expo를 이용한 React native 개발 경험 축적
+			</Typography>
+			<Typography gutterBottom>
+				- React 구조 및 Hook에 대한 이해 축적
+			</Typography>
+			<Typography gutterBottom>
+				- Redux 및 Context state manager 경험 축적
+			</Typography>
+			<Stack className={styles.techStack} direction="row" spacing={1}>
+				<Chip
+					className={styles.chip}
+					label="React js"
+					color="primary"
+				/>
+				<Chip
+					className={styles.chip}
+					label="React Native"
+					color="primary"
+				/>
+				<Chip className={styles.chip} label="Expo" color="primary" />
+				<Chip
+					className={styles.chip}
+					label="Firebase"
+					color="primary"
+					sx={{
+						bgcolor: "secondary.main",
+					}}
+				/>
+				<Chip
+					className={styles.chip}
+					label="Redux"
+					color="primary"
+					sx={{
+						bgcolor: theme.palette.primary.main,
+					}}
+				/>
+			</Stack>
+		</Box>
+	);
+}
+
+const MemoizedText = React.memo(UnMemoizedText);
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const Plaiing = (): React.ReactElement => {
+function Plaiing(): React.ReactElement {
 	const [activeStep, setActiveStep] = useState(0);
 	const maxSteps = images.length;
 
@@ -118,66 +178,9 @@ const Plaiing = (): React.ReactElement => {
 					}
 				/>
 			</Box>
-			<Box>
-				<Typography
-					gutterBottom
-					sx={{
-						fontWeight: "bold",
-					}}
-				>
-					1:1 채팅, 친구관리, 단체채팅을 지원하는 익명 채팅
-					어플리케이션.
-				</Typography>
-				<Typography gutterBottom>- 2020년 개발, 2021년 출시</Typography>
-				<Typography gutterBottom>
-					- Gifted Chat library와 Firebase를 이용한 개인 및 단체 채팅
-					알고리즘 개발
-				</Typography>
-				<Typography gutterBottom>
-					- Expo를 이용한 React native 개발 경험 축적
-				</Typography>
-				<Typography gutterBottom>
-					- React 구조 및 Hook에 대한 이해 축적
-				</Typography>
-				<Typography gutterBottom>
-					- Redux 및 Context state manager 경험 축적
-				</Typography>
-				<Stack className={styles.techStack} direction="row" spacing={1}>
-					<Chip
-						className={styles.chip}
-						label="React js"
-						color="primary"
-					/>
-					<Chip
-						className={styles.chip}
-						label="React Native"
-						color="primary"
-					/>
-					<Chip
-						className={styles.chip}
-						label="Expo"
-						color="primary"
-					/>
-					<Chip
-						className={styles.chip}
-						label="Firebase"
-						color="primary"
-						sx={{
-							bgcolor: "secondary.main",
-						}}
-					/>
-					<Chip
-						className={styles.chip}
-						label="Redux"
-						color="primary"
-						sx={{
-							bgcolor: theme.palette.primary.main,
-						}}
-					/>
-				</Stack>
-			</Box>
+			<MemoizedText />
 		</div>
 	);
-};
+}
 
 export default Plaiing;

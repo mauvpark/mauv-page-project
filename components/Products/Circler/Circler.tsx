@@ -13,7 +13,7 @@ import Iframe from "react-iframe";
 import { theme } from "../../../styles/theme";
 import styles from "./Circler.module.scss";
 
-const Circler = (): React.ReactElement => {
+function Circler(): React.ReactElement {
 	const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
 	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -46,6 +46,7 @@ const Circler = (): React.ReactElement => {
 				>
 					여기를 클릭하세요.
 				</Button>
+
 				<Popover
 					id={id}
 					open={open}
@@ -140,6 +141,7 @@ const Circler = (): React.ReactElement => {
 						</Stack>
 					</Box>
 				</Popover>
+
 				<Iframe
 					className={styles.iframe}
 					height="90%"
@@ -150,6 +152,6 @@ const Circler = (): React.ReactElement => {
 			</Box>
 		</div>
 	);
-};
+}
 
 export default Circler;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import styles from "./ToggleButton.module.scss";
 
-const ToggleButton = (): React.ReactElement => {
+function ToggleButton(): React.ReactElement {
 	const [isDark, setIsDark] = useState(false);
 
 	return (
@@ -20,6 +20,6 @@ const ToggleButton = (): React.ReactElement => {
 			></i>
 		</div>
 	);
-};
+}
 
 export default ToggleButton;

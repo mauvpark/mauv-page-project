@@ -55,62 +55,68 @@ const Products = (): React.ReactElement => {
 	};
 
 	return (
-		<Container
-			sx={{
-				position: "relative",
-				height: "100%",
-				display: "flex",
-				justifyContent: "center",
-				alignItems: "center",
-				scrollSnapAlign: "center",
-			}}
-			maxWidth="xl"
-		>
-			<Typography className={styles.topic} variant="h5">
-				PRODUCTS
-			</Typography>
-			<Box
-				className="productsContainer"
-				sx={{
-					bgcolor: "background.paper",
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "space-between",
-					width: "100%",
-					height: "85%",
-					borderRadius: "2rem",
-					boxShadow: 3,
-				}}
-			>
-				<Tabs
-					className="tabs"
-					orientation="vertical"
-					variant="scrollable"
-					value={value}
-					onChange={handleChange}
-					aria-label="Vertical tabs example"
-					textColor="inherit"
+		<React.Fragment>
+			<header>
+				<Typography className={styles.topic} variant="h5">
+					PRODUCTS
+				</Typography>
+			</header>
+			<main>
+				<Container
 					sx={{
-						borderRight: 1,
-						borderColor: "divider",
-						width: "10rem",
+						position: "relative",
+						height: "100vh",
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+						scrollSnapAlign: "center",
 					}}
+					maxWidth="xl"
 				>
-					<Tab label="버스 알리미" {...a11yProps(0)} />
-					<Tab label="PLAIING" {...a11yProps(1)} />
-					<Tab label="CIRCLER" {...a11yProps(2)} />
-				</Tabs>
-				<TabPanel value={value} index={0}>
-					<Bus />
-				</TabPanel>
-				<TabPanel value={value} index={1}>
-					<Plaiing />
-				</TabPanel>
-				<TabPanel value={value} index={2}>
-					<Circler />
-				</TabPanel>
-			</Box>
-		</Container>
+					<Box
+						className="productsContainer"
+						sx={{
+							bgcolor: "background.paper",
+							display: "flex",
+							alignItems: "center",
+							justifyContent: "space-between",
+							width: "100%",
+							height: "85%",
+							borderRadius: "2rem",
+							boxShadow: 3,
+						}}
+					>
+						<Tabs
+							className="tabs"
+							orientation="vertical"
+							variant="scrollable"
+							value={value}
+							onChange={handleChange}
+							aria-label="Vertical tabs example"
+							textColor="inherit"
+							sx={{
+								borderRight: 1,
+								borderColor: "divider",
+								width: "10rem",
+							}}
+						>
+							<Tab label="버스 알리미" {...a11yProps(0)} />
+							<Tab label="PLAIING" {...a11yProps(1)} />
+							<Tab label="CIRCLER" {...a11yProps(2)} />
+						</Tabs>
+						<TabPanel value={value} index={0}>
+							<Bus />
+						</TabPanel>
+						<TabPanel value={value} index={1}>
+							<Plaiing />
+						</TabPanel>
+						<TabPanel value={value} index={2}>
+							<Circler />
+						</TabPanel>
+					</Box>
+				</Container>
+			</main>
+		</React.Fragment>
 	);
 };
 
