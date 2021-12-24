@@ -1,7 +1,17 @@
 {
   "name": "client",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "private": true,
+  "author": {
+    "email": "mauvpark@gmail.com",
+    "name": "mauvpark",
+    "url": "https://github.com/mauvpark/mauv-page-project"
+  },
+  "bugs": {
+    "email": "mauvpark@gmail.com",
+    "url": "https://github.com/mauvpark/mauv-page-project/issues"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -1,5 +1,11 @@
 # *MAUV PAGE PROJECT*
 
+## 2021-12-24 업데이트(v 1.0.0)
+1. 구조 변경: 각 최상위 컴포넌트의 구조가 변경되었습니다. HTML 구조에 따라 재배열 되었으며, `<header>`, `<main>`이 추가되었습니다.
+2. React Memo가 사용되어 최적화가 진행 되었습니다.
+3. 기존의 스크롤러가 없던 상태에서 스크롤러를 마우스로 사용할 수 있게 변경되었습니다.
+4. MIT 라이센스가 추가되었습니다.
+
 ## A. Stack
 1. Next JS
 2. React Bootstrap
@@ -26,7 +32,7 @@
 3. Material UI의 styling은 정해진 양식에 따라야 하는 경우가 많고, components는 무조건 `sx prop`으로 넘겨야 한다. 그렇지 않으면 제한된 css를 구현하게 되고 제대로 작동하지 않는 경우가 많다. 꼭 필요한 경우를 제외하고는 `className`을 사용하는 것은 지양한다.(global 단위의 css 선언 등.)
 4. 상위 parent component에서 `%`의 `width height`을 가져오는 경우, 중간에 끼어 있는 컴포넌트에서 `width height`을 잘 전달받고 있는지 확인해야 한다.`Products/TabPanel` => `children component`
 
-## F. Report
+## E. Report
 1. Day 1
 - Project 환경 설정
 - Intro 완성

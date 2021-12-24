@@ -55,62 +55,68 @@ const Projects = (): React.ReactElement => {
 	};
 
 	return (
-		<Container
-			sx={{
-				position: "relative",
-				height: "100%",
-				display: "flex",
-				justifyContent: "center",
-				alignItems: "center",
-				scrollSnapAlign: "center",
-			}}
-			maxWidth="xl"
-		>
-			<Typography className={styles.topic} variant="h5">
-				PROJECTS
-			</Typography>
-			<Box
-				className="productsContainer"
-				sx={{
-					bgcolor: "background.paper",
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "space-between",
-					width: "100%",
-					height: "85%",
-					borderRadius: "2rem",
-					boxShadow: 3,
-				}}
-			>
-				<Tabs
-					className="tabs"
-					orientation="vertical"
-					variant="scrollable"
-					value={value}
-					onChange={handleChange}
-					aria-label="Vertical tabs example"
-					textColor="inherit"
+		<React.Fragment>
+			<header>
+				<Typography className={styles.topic} variant="h5">
+					PROJECTS
+				</Typography>
+			</header>
+			<main>
+				<Container
 					sx={{
-						borderRight: 1,
-						borderColor: "divider",
-						width: "10rem",
+						position: "relative",
+						height: "100vh",
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+						scrollSnapAlign: "center",
 					}}
+					maxWidth="xl"
 				>
-					<Tab label="Tic-Tac-Toe" {...a11yProps(0)} />
-					<Tab label="Socket IO chat app" {...a11yProps(1)} />
-					<Tab label="MERN post app" {...a11yProps(2)} />
-				</Tabs>
-				<TabPanel value={value} index={0}>
-					<TicTacToe />
-				</TabPanel>
-				<TabPanel value={value} index={1}>
-					<SocketIoChatApp />
-				</TabPanel>
-				<TabPanel value={value} index={2}>
-					<MernApp />
-				</TabPanel>
-			</Box>
-		</Container>
+					<Box
+						className="productsContainer"
+						sx={{
+							bgcolor: "background.paper",
+							display: "flex",
+							alignItems: "center",
+							justifyContent: "space-between",
+							width: "100%",
+							height: "85%",
+							borderRadius: "2rem",
+							boxShadow: 3,
+						}}
+					>
+						<Tabs
+							className="tabs"
+							orientation="vertical"
+							variant="scrollable"
+							value={value}
+							onChange={handleChange}
+							aria-label="Vertical tabs example"
+							textColor="inherit"
+							sx={{
+								borderRight: 1,
+								borderColor: "divider",
+								width: "10rem",
+							}}
+						>
+							<Tab label="Tic-Tac-Toe" {...a11yProps(0)} />
+							<Tab label="Socket IO chat app" {...a11yProps(1)} />
+							<Tab label="MERN post app" {...a11yProps(2)} />
+						</Tabs>
+						<TabPanel value={value} index={0}>
+							<TicTacToe />
+						</TabPanel>
+						<TabPanel value={value} index={1}>
+							<SocketIoChatApp />
+						</TabPanel>
+						<TabPanel value={value} index={2}>
+							<MernApp />
+						</TabPanel>
+					</Box>
+				</Container>
+			</main>
+		</React.Fragment>
 	);
 };
 

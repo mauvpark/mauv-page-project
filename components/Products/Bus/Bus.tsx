@@ -18,7 +18,45 @@ import { images } from "./Images.js";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const Bus = (): React.ReactElement => {
+function UnMemoizedText() {
+	return (
+		<Box>
+			<Typography
+				gutterBottom
+				sx={{
+					fontWeight: "bold",
+				}}
+			>
+				시내버스 번호를 조회하여 원하는 목적지에서 예약 알림을 보내주는
+				어플리케이션
+			</Typography>
+			<Typography gutterBottom>- 2020년 개발 및 출시</Typography>
+			<Typography gutterBottom>
+				- 사용자의 출발지 버스 번호를 호출하여 목적지까지 추적하는
+				알고리즘 개발
+			</Typography>
+			<Stack className={styles.techStack} direction="row" spacing={1}>
+				<Chip
+					className={styles.chip}
+					label="Java"
+					color="primary"
+					sx={{
+						bgcolor: "secondary.main",
+					}}
+				/>
+				<Chip
+					className={styles.chip}
+					label="Rest API"
+					color="primary"
+				/>
+			</Stack>
+		</Box>
+	);
+}
+
+const MemoizedText = React.memo(UnMemoizedText);
+
+function Bus(): React.ReactElement {
 	const theme = useTheme();
 	const [activeStep, setActiveStep] = useState(0);
 	const maxSteps = images.length;
@@ -125,39 +163,9 @@ const Bus = (): React.ReactElement => {
 					}
 				/>
 			</Box>
-			<Box>
-				<Typography
-					gutterBottom
-					sx={{
-						fontWeight: "bold",
-					}}
-				>
-					시내버스 번호를 조회하여 원하는 목적지에서 예약 알림을
-					보내주는 어플리케이션
-				</Typography>
-				<Typography gutterBottom>- 2020년 개발 및 출시</Typography>
-				<Typography gutterBottom>
-					- 사용자의 출발지 버스 번호를 호출하여 목적지까지 추적하는
-					알고리즘 개발
-				</Typography>
-				<Stack className={styles.techStack} direction="row" spacing={1}>
-					<Chip
-						className={styles.chip}
-						label="Java"
-						color="primary"
-						sx={{
-							bgcolor: "secondary.main",
-						}}
-					/>
-					<Chip
-						className={styles.chip}
-						label="Rest API"
-						color="primary"
-					/>
-				</Stack>
-			</Box>
+			<MemoizedText />
 		</div>
 	);
-};
+}
 
 export default Bus;

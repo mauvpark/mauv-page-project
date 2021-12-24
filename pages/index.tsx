@@ -12,37 +12,41 @@ import Last from "../components/Last/Last";
 
 const Home: NextPage = () => {
 	return (
-		<div>
+		<React.Fragment>
+			{/* 헤드 */}
 			<Head>
 				<title>Welcome to Mauv !</title>
-				<meta name="description" content="Welcome to Mauv site!" />
+				<meta
+					name="description"
+					content="개발자 Mauv의 프로필과 프로젝트를 소개합니다."
+				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
-			<main className="container">
-				<Player
-					rendererSettings={{
-						preserveAspectRatio: "none",
-					}}
-					style={{
-						top: 0,
-						left: 0,
-						position: "absolute",
-						width: "100%",
-						height: "100%",
-					}}
-					autoplay
-					loop
-					src="https://assets8.lottiefiles.com/packages/lf20_06qof0oc.json"
-				/>
-				<ToggleButton />
-				<Intro />
-				<PR />
-				<Products />
-				<Projects />
-				<Last />
-			</main>
-		</div>
+			{/* 배경 */}
+			<Player
+				rendererSettings={{
+					preserveAspectRatio: "none",
+				}}
+				style={{
+					top: 0,
+					left: 0,
+					position: "absolute",
+					width: "100%",
+					height: "100vh",
+				}}
+				autoplay
+				loop
+				src="https://assets8.lottiefiles.com/packages/lf20_06qof0oc.json"
+			/>
+			{/* 테마 변경 */}
+			<ToggleButton />
+			{/* 페이지 */}
+			<Intro />
+			<PR />
+			<Products />
+			<Projects />
+			<Last />
+		</React.Fragment>
 	);
 };
 
