@@ -43,3 +43,11 @@
 - PR 완성
 - Components Dark mode 연계
 - Products page 완성
+
+3. Day 3
+- Project page 완성
+- Outro page 완성
+- 버그 fix
+
+
+All copyrights reserved by Mauv.
